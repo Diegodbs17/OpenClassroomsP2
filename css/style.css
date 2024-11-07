@@ -19,6 +19,10 @@ input, button {
     all: unset;
 }
 
+ul {
+    list-style: none;
+}
+
 .fa-solid {
     color: var(--main-color);
 }
@@ -333,11 +337,40 @@ a {
 	padding: 20px;
 }
 
+/****** Footer ***********/
 
+footer {
+    background-color: var(--main-bg-color);
+    margin-top: 100px;
+}
 
+.footer-content {
+    display: flex;
+}
 
+.footer-column {
+    margin-top: 20px;
+}
 
+.footer-column:not(:first-child) {
+    margin-left: 300px;
+}
 
+.footer-column:first-child {
+    margin-left: 30px;
+}
+
+.footer-column-title {
+    font-size: 18px;
+}
+
+.menu-footer {
+    margin: 20px 0;
+}
+
+.link-footer {
+    padding: 15px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
