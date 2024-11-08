@@ -76,6 +76,14 @@ a {
     font-weight: bold;
 }
 
+.fz-18 {
+    font-size: 18px;
+}
+
+.fz-17 {
+    font-size: 17px;
+}
+
 /****** Header ***********/
 
 .header-content {
@@ -88,6 +96,10 @@ a {
     width: 61px;
 }
 
+.menu-list-content {
+    display: flex;
+}
+
 .link-items {
 	display: inline-block;
 	padding: 40px 15px;
@@ -95,7 +107,7 @@ a {
 	transition: all .15s linear;
 }
 
-.link-items:not(:last-child) {
+.menu-list-items:not(:last-child) {
     margin-right: 69px;
 }
 
@@ -119,34 +131,49 @@ a {
     margin-bottom: 30px;
 }
 
+.form-search-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 .fa-location-dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: black;
     background-color: var(--main-bg-color);
-    font-size: 30px;
-    padding: 10px;
+    font-size: 23px;
+    padding: 15px 20px;
     border-top-left-radius: 10px 10px;
     border-bottom-left-radius: 10px 10px;
 }
 
 .search-input {
-    text-align: center;
+    padding: 15px;
     border-top: 2px solid var(--main-bg-color);
     border-bottom: 2px solid var(--main-bg-color);
-    padding: 14px 0 13px 0;
+    text-align: center;
 }
 
-.form-search {
-    display: flex;
-    align-items: center;
+::placeholder {
+    color: black;
+    font-weight: var(--font-bold);
 }
 
 .btn-search {
-    background: var(--main-color);
-    padding: 15px 15px;
-    border-top-right-radius: 10px 10px;
-    border-bottom-right-radius: 10px 10px;
+    cursor: pointer;
     color: white;
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 16px 24px;
     font-weight: var(--font-bold);
+}
+
+.btn-search-icon {
+    display: none;
 }
 
 [type="search"]::-webkit-search-cancel-button,
@@ -159,26 +186,31 @@ a {
 
 .filter-heading {
     font-size: 18px;
+    margin-right: 20px;
+}
+
+.filter-items-content, .filter-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .filter-content {
-    display: flex;
-    align-items: center;
     margin: 30px 0;
 }
 
 .filter-items {
     display: flex;
     align-items: center;
-    margin-left: 20px;
     padding: 15px 20px;
     border-radius: 50px;
     border: 2px solid var(--main-bg-color);
+    font-size: 17px;
 }
 
 .filter-items i {
     margin-right: 10px;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .filter-items:hover {
@@ -196,7 +228,7 @@ a {
 }
 
 .information-content i {
-    border: 2px solid var(--main-bg-color);
+    border: 1px solid var(--main-bg-color);
     border-radius: 50px;
     padding: 10px 15px;
 }
@@ -353,7 +385,7 @@ footer {
 }
 
 .footer-column:not(:first-child) {
-    margin-left: 300px;
+    margin-left: 20%;
 }
 
 .footer-column:first-child {
@@ -377,6 +409,35 @@ footer {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    .filter-content {
+        display: block;
+    }
+
+    .filter-heading {
+        margin-bottom: 20px;
+    }
+
+    .filter-items-name {
+        font-size: var(--font-size-normal);
+    }
+
+    .filter-items i {
+        font-size: 17px;
+    }
+
+    .card-hebergements-content {
+        grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+    }
+
+    .activities-content img {
+        height: 200px;
+    }
+
+    .footer-column:not(:first-child) {
+        margin-left: 10%;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -411,5 +472,139 @@ footer {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+    .main-container{
+        padding: 0;
+    }
+
+    .header-content {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    
+    .nav-content, .menu-list-content, .menu-list-items {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .menu-list-items:not(:last-child) {
+        margin-right: 0;
+    }
+    
+    .menu-list-items {
+        border-bottom: 3px solid var(--main-bg-color);
+        transition: all .15s linear;
+    }
+    
+    .menu-list-items:hover {
+        border-color: var(--main-color);
+    }
+    
+    .link-items {
+        border-top: none;
+    }
+
+    .search-hebergements {
+        padding: 0px 30px;
+        margin-top: 30px;
+    }
+
+    .search-input {
+        width: 100%;
+        padding-right: 64px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+  
+    .btn-search {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+        border-radius: 15px;
+    }
+  
+    .btn-search-text {
+        display: none;
+    }
+  
+    .btn-search-icon {
+        display: inline-block;
+    }
+  
+    .btn-search-icon i {
+        color: white;
+    }
+
+    .filter-items {
+        width: 180px;
+    }
+
+    .filter-items-content {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .filter-items-content>* {
+        flex: 240px;
+    }
+
+    .filter-items {
+        justify-content: center;
+    }
+
+    .filter-items-name {
+        font-size: 14px;
+    }
+
+    .filter-items i {
+        font-size: 25px;
+    }
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .populaires-cards {
+        flex-direction: column;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0;
+    }
+
+    .card-hebergements-content {
+        grid-template-columns: repeat(auto-fit, minmax(176px, 1fr));
+    }
+
+    .hebergements {
+        background-color: white!important;
+    }
+
+    .activities {
+        padding: 0 30px;
+    }
+
+    .activities-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .activities-content a {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-column:not(:first-child) {
+        margin-left: 30px;
+    }
+    
 }
