@@ -386,7 +386,8 @@ footer {
 @media (max-width: 1024px) {
 
     .filter-content {
-        display: block;
+        flex-direction: column;
+        align-items: start;
     }
 
     .filter-heading {
@@ -509,12 +510,14 @@ footer {
     }
 
     .filter-items {
-        width: 180px;
+        width: 100%;
     }
 
     .filter-items-content {
-        flex-wrap: wrap;
-        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        margin: auto;
+        width: 100%;
     }
 
     .filter-items-content>* {
@@ -523,14 +526,15 @@ footer {
 
     .filter-items {
         justify-content: center;
+        padding: 15px 5px;
     }
 
     .filter-items-name {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .filter-items i {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .hebergements-and-populaires {
