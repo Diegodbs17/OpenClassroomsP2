@@ -515,13 +515,9 @@ footer {
 
     .filter-items-content {
         display: grid;
-        grid-template-columns: repeat(2, 2fr);
+        grid-template-columns: repeat(2, 1fr);
         margin: auto;
         width: 100%;
-    }
-
-    .filter-items-content>* {
-        flex: 240px;
     }
 
     .filter-items {
