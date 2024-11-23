@@ -18,7 +18,7 @@
 <body>
     <div class="main-container">
         <header>
-            <div class="header-content flex-center-beetween">
+            <div class="header-content flex-beetween">
                 <img src="images/logo/Booki.png" alt="Logo Booki" class="logo">
                 <nav class="nav-content">
                     <ul class="menu-list-content flex">
@@ -28,50 +28,50 @@
 				</nav>
             </div>
         </header>
-        <section class="search-hebergements">
-            <div class="search-hebergements-content">
-                <div class="search-heading-content">
-                    <h1 class="section-title bold">Trouvez votre hébergement pour des vacances de rêve</h1>
-                    <h2 class="search-subheading">En plein centre-ville ou en pleine nature</h2>
-                </div>
-                <form action="/action_page.php" method="post">
-                    <div class="form-search-content flex-center ">
-                        <label><i class="fa-solid fa-location-dot"></i></label>
-                        <input class="search-input" type="search" name="search" placeholder="Marseille, France">
-                        <button class="btn-search" type="submit">
-                            <span class="btn-search-icon"><i class="fa-solid fa-magnifying-glass"></i></span> 
-                            <span class="btn-search-text">Rechercher</span>
-                        </button>
-                    </div>
-                </form>
-                <div class="filter-content flex-center">
-                    <h2 class="filter-heading fz-18">Filtres</h2>
-                    <div class="filter-items-content flex-center">
-                        <div class="filter-items flex-center">
-                            <i class="fa-solid fa-money-bill-wave"></i> 
-                            <h2 class="filter-items-name fz-17">Économique</h2>
-                        </div>
-                        <div class="filter-items flex-center">
-                            <i class="fa-solid fa-person"></i>
-                            <h2 class="filter-items-name fz-17">Familial</h2>
-                        </div>
-                        <div class="filter-items flex-center">
-                            <i class="fa-solid fa-heart"></i>
-                            <h2 class="filter-items-name fz-17">Romantique</h2>
-                        </div>
-                        <div class="filter-items flex-center">
-                            <i class="fa-solid fa-fire"></i>
-                            <h2 class="filter-items-name fz-17">Nos pépites</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="information-content flex-center">
-                    <i class="fa-solid fa-info"></i>
-                    <h2 class="information-heading">Plus de 500 logements sont disponibles dans cette ville</h2>
-                </div>
-            </div>
-        </section>
         <main>
+            <section class="search-hebergements">
+                <div class="search-hebergements-content">
+                    <div class="search-heading-content">
+                        <h1 class="section-title bold">Trouvez votre hébergement pour des vacances de rêve</h1>
+                        <h2 class="search-subheading">En plein centre-ville ou en pleine nature</h2>
+                    </div>
+                    <form action="/action_page.php" method="post">
+                        <div class="form-search-content flex-center ">
+                            <label><i class="fa-solid fa-location-dot"></i></label>
+                            <input class="search-input fz-18" type="search" name="search" placeholder="Marseille, France">
+                            <button class="btn-search" type="submit">
+                                <span class="btn-search-icon"><i class="fa-solid fa-magnifying-glass"></i></span> 
+                                <span class="btn-search-text fz-18">Rechercher</span>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="filter-content flex-center">
+                        <h2 class="filter-heading fz-18">Filtres</h2>
+                        <div class="filter-items-content flex-center">
+                            <div class="filter-items flex-center">
+                                <i class="fa-solid fa-money-bill-wave"></i> 
+                                <h2 class="filter-items-name fz-17">Économique</h2>
+                            </div>
+                            <div class="filter-items flex-center">
+                                <i class="fa-solid fa-person"></i>
+                                <h2 class="filter-items-name fz-17">Familial</h2>
+                            </div>
+                            <div class="filter-items flex-center">
+                                <i class="fa-solid fa-heart"></i>
+                                <h2 class="filter-items-name fz-17">Romantique</h2>
+                            </div>
+                            <div class="filter-items flex-center">
+                                <i class="fa-solid fa-fire"></i>
+                                <h2 class="filter-items-name fz-17">Nos pépites</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="information-content flex-center">
+                        <i class="fa-solid fa-info"></i>
+                        <h2 class="information-heading">Plus de 500 logements sont disponibles dans cette ville</h2>
+                    </div>
+                </div>
+            </section>
             <div class="hebergements-and-populaires" id="hebergements-link">
                 <section class="hebergements">
                     <div class="hebergements-title">
@@ -83,8 +83,8 @@
                                 <img src="./images/hebergements/fred-kleber.jpg" alt="Image de la chambre d'hôtel montrant un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
-                                        <h2 class="card-title">Hôtel Le soleil du matin</h2>
-                                        <p class="card-subtitle">Nuit à partir de 128<span class="euro">€</span></p>
+                                        <h2 class="card-title">Hôtel du port</h2>
+                                        <p class="card-subtitle">Nuit à partir de 52<span class="euro">€</span></p>
                                     </div>
                                     <div class="card-rating">
                                         <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -194,7 +194,7 @@
                         </a>
                     </div>
                     <div class="see-more">
-                        <a href="#" class="see-more-link">Afficher plus</a>
+                        <a href="#" class="see-more-link fz-18">Afficher plus</a>
                     </div>
                 </section>
                 <section class="populaires">
@@ -270,7 +270,7 @@
                         <article class="card">
                             <img src="./images/activites/reno-laithienne.jpg" alt="Image du Vieux-Port">
                             <div class="card-content">
-                                <h2 class="card-title">Vieux-Port</h2>
+                                <h2 class="card-title mg-5">Vieux-Port</h2>
                             </div>
                         </article>
                     </a>
@@ -278,7 +278,7 @@
                         <article class="card">
                             <img src="./images/activites/paul-hermann.jpg" alt="Image du Fort de Pomègues">
                             <div class="card-content">
-                                <h2 class="card-title">Fort de Pomègues</h2>
+                                <h2 class="card-title mg-5">Fort de Pomègues</h2>
                             </div>
                         </article>
                     </a>
@@ -329,5 +329,4 @@
         </footer>
     </div>
 </body>
-
 </html>
